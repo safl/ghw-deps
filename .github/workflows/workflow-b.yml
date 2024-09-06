@@ -1,0 +1,21 @@
+name: Workflow B
+
+on:
+  workflow_run:
+    workflows: ["Workflow A"]   # Reference the name of Workflow A
+    types:
+      - completed               # Trigger when Workflow A is completed
+
+jobs:
+  dependent_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts from Workflow A
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifact       # Must match the artifact name from Workflow A
+
+      - name: Use the artifact
+        run: |
+          cat stuff.txt
+          # Use the artifact in some way
