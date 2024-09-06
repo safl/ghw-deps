@@ -9,16 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Build and Upload Artifacts
         run: |
           hostname > stuff.txt
-          
-          # Your build steps here
-        # Example of uploading an artifact
+
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: my-artifact
           path: ./stuff.txt
