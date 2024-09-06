@@ -1,3 +1,4 @@
 # ghw-deps
 
+foo
 ...
