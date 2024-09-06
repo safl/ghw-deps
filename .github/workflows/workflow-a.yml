@@ -20,4 +20,7 @@ jobs:
         with:
           name: my-artifact
           path: ./stuff.txt
+          permissions:
+          contents: read
+          actions: write
 
