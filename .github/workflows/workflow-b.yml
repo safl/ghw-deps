@@ -5,6 +5,15 @@ on:
     workflows: ["Workflow A"]   # Reference the name of Workflow A
     types:
       - completed               # Trigger when Workflow A is completed
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  actions: write
+  pull-requests: write
+  checks: write
 
 jobs:
   use_it:
