@@ -1,7 +1,7 @@
 name: Workflow A
 
 on:
-  push:
+#  push:
   pull_request:
 
 jobs:
@@ -20,7 +20,3 @@ jobs:
         with:
           name: my-artifact
           path: ./stuff.txt
-          permissions:
-          contents: read
-          actions: write
-

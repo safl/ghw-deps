@@ -7,6 +7,10 @@ on:
       - completed               # Trigger when Workflow A is completed
   pull_request:
 
+permissions:
+  contents: read
+  actions: write
+
 jobs:
   use_it:
     runs-on: ubuntu-latest
